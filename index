@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laïana Perfumería | Catálogo Selecto</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200;400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        :root { 
+            --brand-red: #be1622; 
+            --brand-gold: #c5a059; 
+            --brand-cream: #fdfaf6; 
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --gender-bg: #f2ede4;
+        }
+        
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--brand-cream); margin: 0; overflow-x: hidden; }
+        
+        header { 
+            background-color: var(--brand-red); color: var(--white); text-align: center; 
+            padding: 35px 20px 70px 20px; position: relative; border-bottom: 3px solid var(--brand-gold);
+        }
+
+        header h1 { font-family: 'Bernard MT Condensed', 'Anton', sans-serif; margin: 0; font-size: 3.4rem; line-height: 1; }
+        header p { margin-top: 5px; font-size: 0.7rem; letter-spacing: 4px; color: var(--brand-gold); text-transform: uppercase; }
+
+        .brand-seal { position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); z-index: 20; }
+        .brand-seal img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--brand-cream); box-shadow: 0 10px 25px rgba(0,0,0,0.15); background-color: var(--white); }
+
+        .catalog-container { max-width: 1200px; margin: 100px auto 50px auto; padding: 0 20px; }
+
+        .gender-category { margin-bottom: 80px; }
+        
+        .gender-header {
+            background-color: var(--gender-bg); padding: 15px; text-align: center;
+            font-family: 'Anton', sans-serif; font-size: 2.2rem; color: var(--black);
+            text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px;
+            border-left: 10px solid var(--brand-red);
+        }
+
+        .designer-group { margin-bottom: 50px; }
+        .designer-name {
+            font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--brand-gold);
+            margin-bottom: 25px; display: flex; align-items: center; gap: 15px;
+        }
+        .designer-name::after { content: ''; height: 1px; background: var(--brand-gold); flex-grow: 1; opacity: 0.3; }
+
+        .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+        @media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) { .products-grid { grid-template-columns: 1fr; } }
+
+        .product-card { background: var(--white); border-radius: 2px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .swiper { width: 100%; height: 320px; background: #fff; }
+        .swiper-slide { display: flex; align-items: center; justify-content: center; }
+        .swiper-slide img { max-width: 90%; max-height: 90%; object-fit: contain; }
+        .swiper-button-next, .swiper-button-prev { color: var(--brand-red); transform: scale(0.5); }
+
+        .product-details { text-align: center; padding: 25px 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .meta-tag { text-transform: uppercase; font-size: 0.6rem; letter-spacing: 2px; color: #888; margin-bottom: 8px; font-weight: 700; }
+        .product-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 0; font-weight: 700; line-height: 1.2; min-height: 3rem; display: flex; align-items: center; justify-content: center; }
+        .price-tag { display: block; font-size: 1.4rem; color: var(--brand-red); font-weight: 700; margin: 10px 0; }
+        .description { font-size: 0.75rem; color: #555; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+        
+        .btn-laiana { 
+            display: block; padding: 12px; background: var(--brand-red); color: var(--white); text-decoration: none; 
+            font-weight: 700; font-size: 0.7rem; letter-spacing: 2px; transition: 0.3s; border: 2px solid var(--brand-red); text-transform: uppercase;
+        }
+        .btn-laiana:hover { background: transparent; color: var(--brand-red); }
+
+        footer { text-align: center; padding: 60px 20px; font-size: 0.6rem; color: #aaa; letter-spacing: 3px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Laïana Perfumería</h1>
+    <p>Selection par Excellence</p>
+    <div class="brand-seal">
+        <img src="https://github.com/Osmar8676/Visualizadores/blob/main/Imagen1.png?raw=true" alt="Laïana">
+    </div>
+</header>
+
+<div class="catalog-container">
+    
+    <section class="gender-category">
+        <div class="gender-header">Fragancias Unisex</div>
+        <div class="designer-group">
+            <h3 class="designer-name">Laurice Rahmé</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.1301.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_1301.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum • 100 ml</span>
+                        <h2 class="product-name">Bleecker Street</h2>
+                        <span class="price-tag">$35</span>
+                        <p class="description">Oriental Amaderada. Notas de violeta, moras azules y gamuza con un toque de caramelo.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Bleecker%20Street" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gender-category">
+        <div class="gender-header">Fragancias para Ella</div>
+        
+        <div class="designer-group">
+            <h3 class="designer-name">Carolina Herrera</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://slimages.macysassets.com/is/image/MCY/products/6/optimized/35716246_fpx.tif?wid=1500&fmt=webp"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_105931.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum • 100 ml</span>
+                        <h2 class="product-name">La Bomba</h2>
+                        <span class="price-tag">$35</span>
+                        <p class="description">Oriental Floral. Exótica pitahaya y peonía roja sobre una base de vainilla y pachulí.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20La%20Bomba" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://slimages.macysassets.com/is/image/MCY/products/4/optimized/28334084_fpx.tif?wid=1500&fmt=webp"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_78576.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum • 100 ml</span>
+                        <h2 class="product-name">Good Girl Blush</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Floral romántico con bergamota, mandarina, ylang-ylang y un fondo de vainilla.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Good%20Girl%20Blush" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://slimages.macysassets.com/is/image/MCY/products/5/optimized/22520395_fpx.tif?wid=1500&fmt=webp"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_65560.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum • 100 ml</span>
+                        <h2 class="product-name">Very Good Girl</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Oriental Floral con cereza negra, almendra amarga, rosa y un toque de cacao.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Very%20Good%20Girl" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="designer-group">
+            <h3 class="designer-name">Versace</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://slimages.macysassets.com/is/image/MCY/products/2/optimized/21918672_fpx.tif?wid=1500&fmt=webp"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_632.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Toilette • 100 ml</span>
+                        <h2 class="product-name">Bright Crystal</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Floral Frutal radiante con yuzu, granada, peonía y flor de loto. Un clásico luminoso.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Bright%20Crystal" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gender-category">
+        <div class="gender-header">Fragancias para Él</div>
+        
+        <div class="designer-group">
+            <h3 class="designer-name">Carolina Herrera</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://slimages.macysassets.com/is/image/MCY/products/2/optimized/31684582_fpx.tif?wid=1500&fmt=webp"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_46093.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum • 100 ml</span>
+                        <h2 class="product-name">212 VIP Black</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Aromática Fougère con absenta, anís y lavanda sobre una base de vainilla negra.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20212%20VIP%20Black" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.55449.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_55449.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Toilette • 100 ml</span>
+                        <h2 class="product-name">Bad Boy</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Oriental Especiada. El rayo audaz con pimienta blanca, cacao y haba tonka.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Bad%20Boy" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="designer-group">
+            <h3 class="designer-name">Valentino</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.78740.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_78740.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">Eau de Parfum Intense • 100 ml</span>
+                        <h2 class="product-name">Born In Roma Intense</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Oriental Vainilla magnética. Una combinación intensa de vainilla, lavanda y vetiver.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20producto:%20Born%20In%20Roma%20Intense" class="btn-laiana">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 LAÏANA PERFUMERÍA & BEAUTY &bull; QUITO
+</footer>
+
+<script>
+    const swipers = new Swiper(".mySwiper", {
+        loop: true, speed: 800,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+</script>
+
+</body>
+</html>
